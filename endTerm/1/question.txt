@@ -1,0 +1,21 @@
+Q1. Standard OS networking stacks manage protocol headers automatically. In this
+task, you will bypass the stack to manually "forge" a packet with intentional errors
+to observe how network layers respond to corruption. Create a C raw socket
+program to: [20 marks]
+
+a) Manually construct the Ethernet Header, IP Header, and UDP Header.
+
+b) You must deliberately calculate an incorrect UDP checksum and inject it into
+the header.
+
+c) The payload must contain your Roll Number and the current system username
+and time.
+
+d) Setup a topology with two hosts (h1,h2) and a single switch. Execute your
+script from h1 targeting h2.
+
+e) Use Wireshark on h2 to capture the incoming frame.
+
+Submission Requirement: Provide a screenshot of the Wireshark "Packet Details"
+pane. The screenshot must clearly show the "UDP Checksum: [Incorrect]" warning
+and your unique Roll Number in the Data payload.
